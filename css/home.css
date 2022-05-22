@@ -1,0 +1,167 @@
+/* MAIN STYLING */
+main{
+    grid-column-start: 2;
+    grid-column-end: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left:2.5%;
+}
+
+.col{
+    overflow: hidden;
+    padding: 20px;
+}
+main .first-row{
+    display:flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    border-radius: 15px;
+    font-weight: 700;
+    overflow: hidden;
+    background-color: var(--bg-panel);
+}
+main .first-row .col{
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    justify-content: flex-start;
+    width: 100%;
+    background-color: var(--bg-panel);
+}
+
+/* first row */
+main .first-row .svg{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background-color: var(--color-headings);
+}
+main .numbers p:first-child{
+    padding:5px;
+    padding-left: 15px;
+}
+main .numbers p:last-child{
+    font-size: 22px;
+    padding-top: 10px;
+    padding-left: 15px;
+}
+main .numbers p:last-child span{
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 3px 8px;
+    position: relative;
+    top:-4px;
+}
+.up{
+    background-color: #a5e6a5;
+    color:#005900;
+}
+.down{
+    background-color: #ffc2c2;
+    color:#e94444;
+}
+main .numbers p:last-child span img{
+    position: relative;
+    top:2px;
+    height: 11px;
+}
+/* second row */
+main .second-row{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+main .second-row .col{
+    background-color: var(--bg-panel);
+    border-radius: 15px;
+    width: 100%;
+}
+
+.activitiy-wrapper{
+    display:flex;
+    flex-direction: column;
+}
+.activity{
+    margin-top:10px;
+    display: flex;
+    align-items: flex-start;
+    gap:20px;
+    flex-direction: column;
+}
+.activity .ceo{
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 2px 6px;
+    position: relative;
+    top:-2px;
+    background-color: #e0e6a5;
+    color:#a19f3e;
+}
+.activity .manager{
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 2px 6px;
+    position: relative;
+    top:-2px;
+    background-color: #d4a5e6;
+    color:#853ea1;
+}
+.activity .employee{
+    font-weight: 700;
+    font-size: 12px;
+    border-radius: 5px;
+    padding: 2px 6px;
+    position: relative;
+    top:-2px;
+    background-color: #a5e6e6;
+    color:#3e69a1;
+}
+
+@media only screen and (min-width:550px){
+    main .row{
+        animation: load-scale2 1s;
+    }
+    main .first-row{
+        flex-direction: row;
+    }
+    main .first-row .col{
+        width:50%;
+        pointer-events: none;
+        justify-content: center;
+    }
+    
+}
+@media only screen and (min-width:850px){
+    main .row{
+        animation: load-scale 1s;
+    }
+}
+@media only screen and (min-width:1200px){
+    main .first-row .col{
+        width:25%;
+    }
+    main .row{
+        animation: load-scale2 1s;
+    }
+    main .second-row{
+        flex-direction: row;
+    }
+    main .second-row .col{
+        width: 50%;
+    }
+}
+
+@keyframes load-scale {
+    from {transform: scale(1.05);}
+    to { transform: scale(1);}
+}
+@keyframes load-scale2 {
+    from {transform: scale(1.05);}
+    to { transform: scale(1);}
+}

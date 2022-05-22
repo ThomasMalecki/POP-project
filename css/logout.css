@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    font-family: "Nunito Sans", Verdana, sans-serif;
+    --bg: #FCFCFC;
+    --bg-panel: #EBEBEB;
+    --color-headings:#3086e2;
+    --color-headings-hover:#3694FF;
+    --color-text: #333333;
+    background-color: var(--bg);
+}
+html[data-theme='dark']{
+    --bg: #333333;
+    --bg-panel: #434343;
+    --color-headings:#3086e2;
+    --color-headings-hover:#3694FF;
+    --color-text: #B5B5B5;
+}
+.logout-loader-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+    border: 8px solid var(--color-headings);
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: var(--color-headings) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+h1{
+    color:var(--color-text);
+}

@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200;1,300;1,400;1,600;1,700&family=Rubik:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap');
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+html{
+    font-family: "Nunito Sans", Verdana, sans-serif;
+    --bg: #FCFCFC;
+    --bg-panel: #EBEBEB;
+    --color-headings:#3086e2;
+    --color-headings-hover:#3694FF;
+    --color-text: #333333;
+}
+html[data-theme='dark']{
+    --bg: #333333;
+    --bg-panel: #434343;
+    --color-headings:#3086e2;
+    --color-headings-hover:#3694FF;
+    --color-text: #B5B5B5;
+}
+body{
+    font-family: 'Fira Sans Condensed', sans-serif;
+    overflow:hidden;
+}
+.bg{
+    background: url('./img/admin-background.png');
+    background-color: var(--color-headings);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
+.login{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top:50%;
+    left:50%;
+    background-color: var(--bg);
+    border-radius:10px;
+    width:400px;
+    padding-bottom:2%;
+}
+.logo h1{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color:var(--color-text);
+}
+.logo h1 svg{
+    color:var(--color-headings);
+    font-size:60px;
+}
+form{
+    text-align:center;
+    width:70%;
+    margin:auto;
+}
+input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 10px 0;
+    color:var(--color-text);
+    border:2px solid var(--bg-panel);
+    background-color:var(--bg-panel);
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+
+button{
+    width:100%;
+    background-color:var(--color-headings);
+    border: none;
+    color:white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+button:hover{
+    background-color:var(--color-headings-hover);
+}
+p{
+    font-weight:200;
+    color:var(--color-text);
+}
+@media only screen and (max-width: 600px) {
+    .login{
+        width:100%;
+    }
+}
